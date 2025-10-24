@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('view', 'user');
+Route::view('view', 'user')->name('v');
 
 Route::redirect('/here', 'there');
 
@@ -47,3 +47,16 @@ Route::get('/search/{search}/{name}', function (string $search, string $name) {
 Route::get('/user/{id}/profile', function (string $id) {
     return 'hi user ' . $id;
 })->name('profile');
+
+
+
+
+Route::get('route', function () {
+    $current = Route::current();
+    $name = Route::currentRouteName();
+    $action = Route::currentRouteAction();
+    dd($current, $name, $action);
+})->name('r');
+
+
+
