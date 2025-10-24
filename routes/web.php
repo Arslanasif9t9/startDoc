@@ -7,3 +7,8 @@ Route::get('/', function () {
 });
 
 Route::redirect('/here', 'there');
+
+Route::get('/user/{name?}', function (string $name = 'arslan') {
+    // return view('user');
+    return 'user page ' . $name;
+});
