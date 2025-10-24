@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Models\Order;
 
 class PhotoController extends Controller
 {
@@ -66,6 +67,7 @@ class PhotoController extends Controller
     public function destroy(string $id)
     {
         //
+        // Order::all();
         return $id . ' destroy...';
     }
 }

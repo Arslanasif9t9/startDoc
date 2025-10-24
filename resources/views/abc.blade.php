@@ -50,4 +50,6 @@
         <input type="password" name='password' placeholder="enter your password">
         <input type="submit">
     </form>
+
+    {{-- <a href="abcd/oisdh/ugjyg/vhyf">missing link</a> --}}
 </div>

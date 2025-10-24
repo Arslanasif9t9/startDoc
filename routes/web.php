@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Middleware\CheckPassword;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PhotoController;
+use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function () {
     return view('welcome');
@@ -72,4 +73,7 @@ Route::post('submit', function(Request $request) {
     return $request->name;
 })->middleware('CP');
 
-Route::resource('abcd', PhotoController::class);
+Route::resource('abcd', PhotoController::class)
+    ->missing(function (Request $request) {
+        return Redirect::route('abcd.index');
+    });
