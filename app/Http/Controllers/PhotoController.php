@@ -12,22 +12,25 @@ class PhotoController extends Controller
     public function index()
     {
         //
+        return view('abc');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        return $request->name . ' Created Successfull...';
     }
-
+    
     /**
      * Store a newly created resource in storage.
-     */
+    */
     public function store(Request $request)
     {
         //
+        return $request->name . ' Stored Successfull...';
     }
 
     /**
@@ -36,6 +39,7 @@ class PhotoController extends Controller
     public function show(string $id)
     {
         //
+        return $id . " is showing";
     }
 
     /**
@@ -44,6 +48,7 @@ class PhotoController extends Controller
     public function edit(string $id)
     {
         //
+        return $id . " Editing ";
     }
 
     /**
@@ -52,6 +57,7 @@ class PhotoController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        return $id . $request->name . ' is updated.';
     }
 
     /**
@@ -60,5 +66,6 @@ class PhotoController extends Controller
     public function destroy(string $id)
     {
         //
+        return $id . ' destroy...';
     }
 }
