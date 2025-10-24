@@ -68,4 +68,4 @@ Route::get('abc', function() {
 
 Route::post('submit', function(Request $request) {
     return $request->name;
-})->middleware('pass&ip');
+})->middleware('CP');
