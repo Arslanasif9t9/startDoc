@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Middleware\CheckPassword;
 
 Route::get('/', function () {
     return view('welcome');
@@ -67,4 +68,4 @@ Route::get('abc', function() {
 
 Route::post('submit', function(Request $request) {
     return $request->name;
-});
+})->middleware(CheckPassword::class);
