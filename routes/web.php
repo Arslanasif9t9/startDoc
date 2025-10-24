@@ -30,3 +30,11 @@ Route::get('/whincon/{id}', function (string $name) {
     // return view('user');
     return 'user page ' . $name;
 })->whereIn('id', ['100', '200', '300']);
+
+
+
+Route::get('/globlecon/{id}', function (string $name) {
+    // return view('user');
+    return 'user page ' . $name;
+});
+
