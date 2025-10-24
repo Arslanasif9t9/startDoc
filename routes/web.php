@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
@@ -60,3 +61,10 @@ Route::get('route', function () {
 
 
 
+Route::get('abc', function() {
+    return view ('abc');
+});
+
+Route::post('submit', function(Request $request) {
+    return $request->name;
+});
