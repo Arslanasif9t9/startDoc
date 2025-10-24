@@ -8,7 +8,13 @@ Route::get('/', function () {
 
 Route::redirect('/here', 'there');
 
-Route::get('/user/{name?}', function (string $name = 'arslan') {
+Route::get('/user/{nme?}', function (?string $name = 'arslan') {
     // return view('user');
     return 'user page ' . $name;
 });
+
+
+Route::get('/con/{id?}', function (?string $name = 'arslan') {
+    // return view('user');
+    return 'user page ' . $name;
+})->where('id', '[0-9]+');
