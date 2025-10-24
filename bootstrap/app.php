@@ -23,6 +23,10 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'CP'=>CheckPassword::class
         ]);
+        $middleware->priority([
+            EnsureTokenValid::class,
+            CheckPassword::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
