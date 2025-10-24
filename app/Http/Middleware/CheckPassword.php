@@ -15,7 +15,7 @@ class CheckPassword
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ($request->password != 'Arslan') {
+        if ($request->password != 'arslan') {
             return redirect('abc');
         }
         return $next($request);
