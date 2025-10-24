@@ -38,3 +38,7 @@ Route::get('/globlecon/{id}', function (string $name) {
     return 'user page ' . $name;
 });
 
+Route::get('/search/{search}/{name}', function (string $search, string $name) {
+    return $search . " " . $name;
+})->where('search', '.*');
+
