@@ -18,3 +18,15 @@ Route::get('/con/{id?}', function (?string $name = 'arslan') {
     // return view('user');
     return 'user page ' . $name;
 })->where('id', '[0-9]+');
+
+
+Route::get('/whcon/{id?}', function (?string $name = 'arslan') {
+    // return view('user');
+    return 'user page ' . $name;
+})->whereNumber('id');
+
+
+Route::get('/whincon/{id}', function (string $name) {
+    // return view('user');
+    return 'user page ' . $name;
+})->whereIn('id', ['100', '200', '300']);
