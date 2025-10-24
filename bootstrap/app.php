@@ -27,6 +27,10 @@ return Application::configure(basePath: dirname(__DIR__))
             EnsureTokenValid::class,
             CheckPassword::class,
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'submit'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
