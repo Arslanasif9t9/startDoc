@@ -27,6 +27,10 @@ class HttpRequest extends Controller
         // return $request->header('X-Header-Name');
         // return $request->header('X-Header-Name', "default");
         // return $request->hasHeader('X-Header-Name');
-        return $request->bearerToken();
+        // return $request->bearerToken();
+        // return $request->ip();
+        // return $request->getAcceptableContentTypes();
+        // return $request->accepts(['text/html', 'application/json'])
+        return response()->json(['name' => $request->name]);
     }
 }
