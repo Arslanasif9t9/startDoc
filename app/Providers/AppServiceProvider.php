@@ -22,5 +22,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Route::pattern('id', '[0-9]+');
+        Route::resourceVerbs([
+            'create' => 'bnao',
+            'edit' => 'badlo'
+        ]);
     }
 }

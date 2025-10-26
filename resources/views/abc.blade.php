@@ -25,7 +25,7 @@
 
     <a href="abcd/Mobile">Mobile</a>
 
-    <form action="abcd/mobile/edit" method="GET">
+    <form action="abcd/mobile/badlo" method="GET">
         @csrf
         edit: 
         <input type="text" name="name" placeholder="enter your name">
