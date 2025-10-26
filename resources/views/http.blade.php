@@ -10,6 +10,7 @@
 </h1>
 
 <script>
+    // just for git push comment
     function submit() {
         let name = document.getElementById('name').value
         let file = document.getElementById('file').value
