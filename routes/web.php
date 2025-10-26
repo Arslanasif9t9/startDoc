@@ -79,4 +79,4 @@ Route::resource('abcd', PhotoController::class)
     });
 
 
-Route::singleton('ab', UserController::class)->creatable();
+Route::singleton('ab', UserController::class)->creatable()->middleware('CP');
