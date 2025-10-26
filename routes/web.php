@@ -80,3 +80,16 @@ Route::resource('abcd', PhotoController::class)
 
 
 Route::singleton('ab', UserController::class)->creatable()->middleware('CP');
+
+
+
+
+
+
+
+
+
+
+use App\Http\Controllers\HttpRequest;
+Route::get('http', [HttpRequest::class, 'init']);
+Route::get('http/path', [HttpRequest::class, 'path']);
