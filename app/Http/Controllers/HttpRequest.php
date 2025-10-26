@@ -31,6 +31,10 @@ class HttpRequest extends Controller
         // return $request->ip();
         // return $request->getAcceptableContentTypes();
         // return $request->accepts(['text/html', 'application/json'])
-        return response()->json([$request->name]);
+        // return response()->json([$request->name]);
+
+        // $request->collect('name');
+
+        return $request->photo->store('images');
     }
 }
