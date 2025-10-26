@@ -1,3 +1,4 @@
+<meta name='_token' content="{{ csrf_token() }}">
 <h1>
     <form action="http/path"  method="POST">
         @csrf
@@ -9,21 +10,22 @@
 <script>
     function submit() {
         let name = document.getElementById('name').value
+        let token = document.querySelector('meta[name="_token"]').getAttribute('content');
         // console.log (name)
         // let token = document.
 
-        fetch(`http://127.0.0.1:8000/http/path?name=${name}`,{
+        fetch(`http://127.0.0.1:8000/http/path`,{
             // method: 'GET',
             // header: {
             //     'Content-Type': 'application/json'
             // },
             // body: JSON.stringify(name),
-            method: 'Get',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer your-token-here'
-            }
-            // body: JSON.stringify(name)
+                'X-CSRF-TOKEN': token
+            },
+            body: JSON.stringify({'name': name})
         })
         .then(respone => respone.json())
         .then(data => console.log(data))
