@@ -77,3 +77,6 @@ Route::resource('abcd', PhotoController::class)
     ->missing(function (Request $request) {
         return Redirect::route('abcd.index');
     });
+
+
+Route::singleton('ab', UserController::class)->creatable();

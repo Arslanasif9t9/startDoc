@@ -13,12 +13,13 @@ class UserController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for creating a new resource.
-     */
+    */
     public function create()
     {
+        return view('abc');
         //
     }
 
@@ -28,37 +29,46 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        return 'call perfect';
     }
-
+    
     /**
      * Display the specified resource.
-     */
+    */
     public function show(string $id)
     {
         //
+        return 'call perfect';
+        return 'showing';
     }
-
+    
     /**
      * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    */
+    public function edit()
     {
         //
+        return 'editing';
+        return 'call perfect';
     }
-
+    
     /**
      * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    */
+    public function update(Request $request)
     {
         //
+        return 'updating';
+        return 'call perfect';
     }
-
+    
     /**
      * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    */
+    public function destroy()
     {
         //
+        return 'call perfect';
+        return 'call perfect';
     }
 }

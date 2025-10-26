@@ -7,7 +7,7 @@
         <input type="submit">
     </form>
 
-    <form action="abcd/create" method="GET">
+    <form action="bnao" method="GET">
         @csrf
         create: 
         <input type="text" name="name" placeholder="enter your name">
@@ -15,7 +15,7 @@
         <input type="submit">
     </form>
     
-    <form action="abcd" method="POST">
+    <form action="/ab" method="POST">
         @csrf
         store: 
         <input type="text" name="name" placeholder="enter your name">
@@ -23,9 +23,9 @@
         <input type="submit">
     </form>
 
-    <a href="abcd/Mobile">Mobile</a>
+    <a href="Mobile">Mobile</a>
 
-    <form action="abcd/mobile/badlo" method="GET">
+    <form action="badlo" method="GET">
         @csrf
         edit: 
         <input type="text" name="name" placeholder="enter your name">
@@ -33,7 +33,7 @@
         <input type="submit">
     </form>
 
-    <form action="abcd/mobile" method="POST">
+    <form action="/ab" method="POST">
         @csrf
         @method('PUT')
         Update:         
@@ -42,7 +42,7 @@
         <input type="submit">
     </form>
 
-    <form action="abcd/mobile" method="POST">
+    <form action="/ab" method="POST">
         @csrf
         @method('DELETE')
         Delete: 
